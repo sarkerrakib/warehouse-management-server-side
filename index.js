@@ -40,7 +40,11 @@ async function run(){
         });
 
         // Post
-        
+        app.post('/store', async(req, res) =>{
+            const newService = req.body;
+            const result = await serviceCollection.insertOne(newService)
+            res.send(result);
+        });
 
         // Delete
         app.delete('/store/:id', async(req, res) =>{
