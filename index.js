@@ -83,6 +83,10 @@ app.get('/', (req, res) =>{
     res.send('WareHouse Server');
 });
 
+app.get('/server', (req, res) =>{
+    res.send('run server')
+})
+
 app.listen(port, () =>{
     console.log('Listening to Port', port);
 })
